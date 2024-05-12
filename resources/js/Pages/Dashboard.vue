@@ -4,11 +4,9 @@ import BreadCroumbs from '@/OwnComponents/BreadCroumbs.vue';
 
 const props = defineProps({
     projectsCount: Number,
-    categoriesCount: Number,
-    articlesCount: Number,
+    servicesCount: Number,
     latestProject: String,
-    latestCategory: String,
-    latestArticle: String,
+    latestService: String,
 });
 
 const breadcrumbs = [
@@ -45,23 +43,7 @@ const breadcrumbs = [
                                 Last update: {{ latestProject }}
                             </p>
                         </div>
-                        <div
-                            class="p-6 bg-white border border-gray-200 rounded-lg shadow">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                                class="w-7 h-7 stroke-red-500">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
-                            </svg>
-
-                            <h5 class="mb-2 mt-2 text-2xl font-semibold tracking-tight text-gray-900">
-                                Articles</h5>
-
-                            <p class="mb-3 font-normal text-gray-500">{{ articlesCount }} active articles</p>
-
-                            <p class="inline-flex items-center text-black-600">
-                                Last update: {{ latestArticle }}
-                            </p>
-                        </div>
+                        
                         <div
                             class="p-6 bg-white border border-gray-200 rounded-lg shadow">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="red" class="w-6 h-6">
@@ -71,12 +53,12 @@ const breadcrumbs = [
                               
 
                             <h5 class="mb-3 mt-3 text-2xl font-semibold tracking-tight text-gray-900">
-                                Categories</h5>
+                                Services</h5>
 
-                            <p class="mb-3 font-normal text-gray-500">{{ categoriesCount }} active categories</p>
+                            <p class="mb-3 font-normal text-gray-500">{{ servicessCount }} active services</p>
 
                             <p class="inline-flex items-center text-black-600">
-                                Last update: {{ latestCategory }}
+                                Last update: {{ latestService }}
                             </p>
                         </div>
                     </div>

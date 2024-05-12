@@ -9,7 +9,7 @@ import PrimaryButton from '@/Components/PrimaryButton.vue';
 import BreadCroumbs from '@/OwnComponents/BreadCroumbs.vue';
 
 const props = defineProps({
-    categories: Object,
+    services: Object,
 });
 
 const headers = [
@@ -24,33 +24,33 @@ const headers = [
 
 const breadcrumbs = [
     {
-        label: "Categories"
+        label: "Services"
     }
 ];
 
 </script>
 
 <template>
-    <AppLayout title="Categories">
+    <AppLayout title="Services">
         <template #header>
             <BreadCroumbs :items="breadcrumbs"></BreadCroumbs>
         </template>
 
         <Container>
-            <PrimaryButton :href="route('categories.create')">Add new</PrimaryButton>
+            <PrimaryButton :href="route('services.create')">Add new</PrimaryButton>
 
             <Card class="mt-4">
-                <AppTable :headers="headers" :items="categories">
-                    <tr v-for="category in categories.data" :key="category.id">
-                        <td>{{ category.name }}</td>
-                        <td>{{ category.slug }}</td>
-                        <td>{{ category.created_at_formated }}</td>
+                <AppTable :headers="headers" :items="services">
+                    <tr v-for="service in services.data" :key="service.id">
+                        <td>{{ service.name }}</td>
+                        <td>{{ service.slug }}</td>
+                        <td>{{ service.created_at_formated }}</td>
                         <td>
                             <div class="flex items-center justify-end space-x-2">
-                                <EditBtn :url="route('categories.edit', { category: category.id })"></EditBtn>
+                                <EditBtn :url="route('services.edit', { service: service.id })"></EditBtn>
 
-                                <DeleteBtn :url="route('categories.destroy', { category: category.id })"
-                                    module-name="category"></DeleteBtn>
+                                <DeleteBtn :url="route('services.destroy', { service: service.id })"
+                                    module-name="Service"></DeleteBtn>
                             </div>
                         </td>
                     </tr>

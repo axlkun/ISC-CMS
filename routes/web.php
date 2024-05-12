@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\ArticlesController;
-use App\Http\Controllers\Admin\CategoriesController;
+use App\Http\Controllers\Admin\ServicesController;
 use App\Http\Controllers\Admin\ProjectsController;
 use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
@@ -23,7 +23,7 @@ use App\Http\Controllers\Admin\SettingsController;
 Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
-        // 'canRegister' => Route::has('register'),
+        'canRegister' => Route::has('register'),
     ]);
 });
 
@@ -36,7 +36,6 @@ Route::middleware(['auth', 'verified'])
         Route::post('settings/save-about', [SettingsController::class, 'saveAbout'])->name('settings.save-about');
         Route::post('settings/save-contact', [SettingsController::class, 'saveContact'])->name('settings.save-contact');
 
-        Route::resource('categories',CategoriesController::class);
-        Route::resource('articles',ArticlesController::class);
+        Route::resource('service',ServicesController::class);
         Route::resource('projects',ProjectsController::class);
     });

@@ -15,7 +15,7 @@ import BreadCroumbs from '@/OwnComponents/BreadCroumbs.vue';
 
 const props = defineProps({
     edit: Boolean,
-    category: Object
+    service: Object
 });
 
 const form = useForm({
@@ -25,11 +25,11 @@ const form = useForm({
 
 const breadcrumbs = [
     {
-        label: "Categories",
-        url: route('categories.index')
+        label: "Services",
+        url: route('services.index')
     },
     {
-        label: `${props.edit ? 'Edit' : 'Add'} Category`
+        label: `${props.edit ? 'Edit' : 'Add'} Service`
     }
 ];
 
@@ -42,28 +42,28 @@ watch(
 
 onMounted(() => {
     if (props.edit) {
-        form.name = props.category.data.name
-        form.slug = props.category.data.slug
+        form.name = props.service.data.name
+        form.slug = props.service.data.slug
     }
 });
 
-const saveCategory = () => {
+const saveService = () => {
 
     props.edit 
-    ? form.put(route('categories.update', {id: props.category.data.id}))
-    : form.post(route('categories.store'));
+    ? form.put(route('service.update', {id: props.service.data.id}))
+    : form.post(route('service.store'));
 };
 </script>
 
 <template>
-    <AppLayout title="Category">
+    <AppLayout title="Service">
         <template #header>
             <BreadCroumbs :items="breadcrumbs"></BreadCroumbs>
         </template>
 
         <Container>
             <Card>
-                <form @submit.prevent="saveCategory">
+                <form @submit.prevent="saveService">
                     <div>
                         <InputLabel for="name" value="Name" />
                         <TextInput id="name" v-model="form.name" type="text" class="mt-1 block w-full" required

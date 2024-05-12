@@ -2,6 +2,8 @@
 
 namespace App\Http\Resources;
 
+use App\Models\Service;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -16,18 +18,21 @@ class ProjectResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'title' => $this->when($this->title,$this->title),
-            'slug' => $this->when($this->slug,$this->slug),
             'imageUrl' => $this->getImageUrl(),
-            'summary' => $this->when($this->summary,$this->summary), 
-            'description' => $this->when($this->description,$this->description), 
-            'technologies' => $this->when($this->technologies,json_decode($this->technologies)), 
-            'company' => $this->when($this->company,$this->company), 
-            'website_link' => $this->when($this->website_link,$this->website_link), 
-            'repo_link' => $this->when($this->repo_link,$this->repo_link), 
+            'alt_image' => $this->when($this->alt_image,$this->alt_image),
+            'title' => $this->title,
+            'services' => ServiceResource::collection($this->whenLoaded('services')),
+            'slug' => $this->when($this->slug,$this->slug),
+            'summary' => $this->when($this->summary,$this->summary),
+            'meta_description' => $this->when($this->meta_description,$this->meta_description),
+            'keywords' => $this->when($this->keywords,$this->keywords),
+            'description' => $this->when($this->description,$this->description),
+            'small_description' => $this->when($this->description,Str::limit(strip_tags($this->description), 80)),
             'created_at_formated' => $this->when($this->created_at, function(){
                 return $this->created_at->diffForHumans();
-            })
+            }),
+            'updated_date' => $this->when($this->updated_at,function() {return $this->updated_at->format('M d, Y');}),
+            'created_date' => $this->when($this->created_at,function() {return $this->created_at->format('M d, Y');})
            ];
     }
 }
