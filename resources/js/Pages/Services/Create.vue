@@ -50,8 +50,8 @@ onMounted(() => {
 const saveService = () => {
 
     props.edit 
-    ? form.put(route('service.update', {id: props.service.data.id}))
-    : form.post(route('service.store'));
+    ? form.put(route('services.update', {id: props.service.data.id}))
+    : form.post(route('services.store'));
 };
 </script>
 
