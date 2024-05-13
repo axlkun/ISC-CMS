@@ -64,7 +64,7 @@ class ServicesController extends Controller
     {
 
         // Verifica si el servicio tiene asociados artículos
-        if ($service->articles->count() > 0) {
+        if ($service->projects()->count() > 0) {
             return redirect()->route('services.index')
             ->with('failure', 'Service cannot be deleted because it is associated with one or more articles.');
         }
