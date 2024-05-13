@@ -17,11 +17,9 @@ return new class extends Migration
             $table->string('slug')->unique();
             $table->string('image');
             $table->string('summary');
+            $table->date('date');
             $table->longText('description');
-            $table->string('technologies');
-            $table->string('company');
-            $table->string('website_link')->nullable();
-            $table->string('repo_link')->nullable(); 
+            $table->string('location');
             $table->timestamps();
         });
     }
