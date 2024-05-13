@@ -55,7 +55,7 @@ const breadcrumbs = [
                             <h5 class="mb-3 mt-3 text-2xl font-semibold tracking-tight text-gray-900">
                                 Services</h5>
 
-                            <p class="mb-3 font-normal text-gray-500">{{ servicessCount }} active services</p>
+                            <p class="mb-3 font-normal text-gray-500">{{ servicesCount }} active services</p>
 
                             <p class="inline-flex items-center text-black-600">
                                 Last update: {{ latestService }}
