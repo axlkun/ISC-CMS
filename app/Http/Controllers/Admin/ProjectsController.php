@@ -12,7 +12,7 @@ use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use Inertia\Inertia;
 
-class ProjectController extends Controller
+class ProjectsController extends Controller
 {
     public function index()
     {
