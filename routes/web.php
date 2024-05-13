@@ -36,6 +36,6 @@ Route::middleware(['auth', 'verified'])
         Route::post('settings/save-about', [SettingsController::class, 'saveAbout'])->name('settings.save-about');
         Route::post('settings/save-contact', [SettingsController::class, 'saveContact'])->name('settings.save-contact');
 
-        Route::resource('service',ServicesController::class);
+        Route::resource('services',ServicesController::class);
         Route::resource('projects',ProjectsController::class);
     });
