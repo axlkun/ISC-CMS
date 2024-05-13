@@ -28,7 +28,7 @@ class ProjectsController extends Controller
         return Inertia::render('Projects/Create', [
             "edit" => false,
             "project" => new ProjectResource(new Project()),
-            "services" => ProjectResource::collection(Service::select(['id', 'name'])->get())
+            "services" => ServiceResource::collection(Service::select(['id', 'name'])->get())
         ]);
     }
 
@@ -40,10 +40,9 @@ class ProjectsController extends Controller
             'title' => ['required', 'string', 'max:255'],
             'slug' => ['required', 'string', Rule::unique(Project::class)],
             'image' => ['required', 'image', 'max:3000'],
-            'alt_image' => ['nullable','string','max:255'],
             'summary' => ['required', 'string','max:255'],
-            'meta_description' => ['nullable','string', 'max:255'],
-            'keywords' => ['nullable','string', 'max:255'],
+            'location' => ['required', 'string'],
+            'date' => ['required', 'string'],
             'description' => ['required', 'string'],
         ]);
 
@@ -75,15 +74,16 @@ class ProjectsController extends Controller
     public function update(Request $request, Project $project, UploadFile $uploadFile)
     {
 
+        //dd($request->all());
+
         $data = $request->validate([
             'services' => ['required', 'array'],
             'title' => ['required', 'string', 'max:255'],
             'slug' => ['required', 'string', Rule::unique(Project::class)->ignore($project->id)],
             'image' => ['nullable', 'image', 'max:3000'],
-            'alt_image' => ['nullable','string','max:255'],
             'summary' => ['required', 'string','max:255'],
-            'meta_description' => ['nullable','string', 'max:255'],
-            'keywords' => ['nullable','string', 'max:255'],
+            'location' => ['required', 'string'],
+            'date' => ['required', 'string'],
             'description' => ['required', 'string'],
         ]);
 

@@ -2,7 +2,6 @@
 
 namespace App\Http\Resources;
 
-use App\Models\Service;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
@@ -19,15 +18,13 @@ class ProjectResource extends JsonResource
         return [
             'id' => $this->id,
             'imageUrl' => $this->getImageUrl(),
-            'alt_image' => $this->when($this->alt_image,$this->alt_image),
             'title' => $this->title,
             'services' => ServiceResource::collection($this->whenLoaded('services')),
             'slug' => $this->when($this->slug,$this->slug),
             'summary' => $this->when($this->summary,$this->summary),
-            'meta_description' => $this->when($this->meta_description,$this->meta_description),
-            'keywords' => $this->when($this->keywords,$this->keywords),
             'description' => $this->when($this->description,$this->description),
-            'small_description' => $this->when($this->description,Str::limit(strip_tags($this->description), 80)),
+            'location' => $this->location,
+            'date' => $this->date,
             'created_at_formated' => $this->when($this->created_at, function(){
                 return $this->created_at->diffForHumans();
             }),

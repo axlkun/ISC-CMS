@@ -3,11 +3,12 @@
 namespace App\Models;
 
 use App\Traits\Imageable;
-use App\Contracts\ImageableContract;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use App\Contracts\ImageableContract as ContractsImageableContract;
 
-class Project extends Model implements ImageableContract
+class Project extends Model implements ContractsImageableContract
 {
     use HasFactory;
     use Imageable;
