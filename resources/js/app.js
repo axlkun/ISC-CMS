@@ -14,7 +14,7 @@ import MultiSelect from 'primevue/multiselect';
 import Chips from 'primevue/chips';
 
 // const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
-const appName = 'AxelPortfolio';
+const appName = 'ISC';
 
 createInertiaApp({
     title: (title) => `${title} - ${appName}`,
