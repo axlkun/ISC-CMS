@@ -14,7 +14,7 @@ const props = defineProps({
 
 const headers = [
     { name: "Title" },
-    { name: "Client" },
+    { name: "Service" },
     { name: "Created date" },
     {
         name: "Actions",
@@ -43,8 +43,15 @@ const breadcrumbs = [
                 <AppTable :headers="headers" :items="projects">
                     <tr v-for="project in projects.data" :key="project.id">
                         <td>{{ project.title }}</td>
-                        <td>{{ project.company }}</td>
-                        <td>{{ project.created_at_formated }}</td>
+                        <td>
+                            <!-- Iterar sobre los servicios del proyecto -->
+                            <span v-for="(service, index) in project.services" :key="index">
+                                {{ service.name }}
+                                <!-- Agregar coma y espacio después de cada servicio, excepto el último -->
+                                <span v-if="index !== project.services.length - 1">, </span>
+                            </span>
+                        </td>
+                        <td>{{ project.date }}</td>
                         <td>
                             <div class="flex items-center justify-end space-x-2">
                                 <EditBtn :url="route('projects.edit', { project: project.id })"></EditBtn>
