@@ -45,11 +45,11 @@ let imageUrl = ref("");
 
 const breadcrumbs = [
     {
-        label: "Projects",
+        label: "Proyectos",
         url: route('projects.index')
     },
     {
-        label: `${props.edit ? 'Edit' : 'Add'} Project`
+        label: `${props.edit ? 'Editar' : 'Crear'} proyecto`
     }
 ];
 
@@ -85,7 +85,7 @@ const saveProject = () => {
 </script>
 
 <template>
-    <AppLayout title="Project">
+    <AppLayout title="Proyecto">
         <template #header>
             <BreadCroumbs :items="breadcrumbs"></BreadCroumbs>
         </template>
@@ -95,21 +95,21 @@ const saveProject = () => {
                 <form @submit.prevent="saveProject" enctype="multipart/form-data">
                     <div class="col-span-6 sm:col-span-4">
 
-                        <AppImage :imageUrl="imageUrl" label="Image" v-model="form.image" :errorMessage="form.errors.image">
+                        <AppImage :imageUrl="imageUrl" label="Imagen principal" v-model="form.image" :errorMessage="form.errors.image">
                         </AppImage>
 
                     </div>
                     
                     <div class="mt-4" style="border: 1px solid grey;">
-                        <InputLabel for="service" value="Service" />
+                        <InputLabel for="service" value="Servicio" />
                         <MultiSelect v-model="form.services" display="chip" :options="services.data" optionLabel="name"
-                            optionValue="id" placeholder="Select service" :maxSelectedLabels="5"
+                            optionValue="id" placeholder="Selecciona el servicio" :maxSelectedLabels="5"
                             class="w-full md:w-20rem" />
                         <InputError :message="form.errors.service" class="mt-2" />
                     </div>
 
                     <div class="mt-4">
-                        <InputLabel for="title" value="Title" />
+                        <InputLabel for="title" value="Titulo" />
                         <TextInput id="title" v-model="form.title" type="text" class="mt-1 block w-full" required
                             autocomplete="title" />
                         <InputError :message="form.errors.title" class="mt-2" />
@@ -124,7 +124,7 @@ const saveProject = () => {
 
 
                     <div class="mt-4">
-                        <InputLabel for="summary" value="Summary" />
+                        <InputLabel for="summary" value="Breve introducción" />
 
                         <AppTexArea id="summary" v-model="form.summary" type="text" class="mt-1 block w-full" required
                             autocomplete="summary"></AppTexArea>
@@ -134,21 +134,21 @@ const saveProject = () => {
                     </div>
 
                     <div class="mt-4">
-                        <InputLabel for="location" value="Location" />
+                        <InputLabel for="location" value="Ubicación" />
                         <TextInput id="location" v-model="form.location" type="text" class="mt-1 block w-full" required
                             autocomplete="location" />
                         <InputError :message="form.errors.location" class="mt-2" />
                     </div>
 
                     <div class="mt-4">
-                        <InputLabel for="date" value="Date" />
+                        <InputLabel for="date" value="Fecha del proyecto" />
                         <TextInput id="date" v-model="form.date" type="date" class="mt-1 block w-full" required
                             autocomplete="date" />
                         <InputError :message="form.errors.date" class="mt-2" />
                     </div>
 
                     <div class="mt-4">
-                        <InputLabel for="description" value="Description" />
+                        <InputLabel for="description" value="Descripción del proyecto" />
 
                         <AppCkeditor v-model="form.description"></AppCkeditor>
 

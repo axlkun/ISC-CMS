@@ -56,7 +56,7 @@ class ProjectsController extends Controller
         $project->services()->sync($data['services']);
 
         return redirect()->route('projects.index')
-            ->with('success', 'Project stored successfully');
+            ->with('success', 'Proyecto creado');
     }
 
     public function edit(Project $project)
@@ -102,7 +102,7 @@ class ProjectsController extends Controller
         $project->services()->sync($data['services']);
 
         return redirect()->route('projects.index')
-            ->with('success', 'Project updated successfully');
+            ->with('success', 'Proyecto actualizado');
     }
 
     public function destroy(Project $project)
@@ -114,6 +114,6 @@ class ProjectsController extends Controller
         $project->delete();
 
         return redirect()->route('projects.index')
-            ->with('success', 'Project deleted successfully');
+            ->with('success', 'Proyecto eliminado');
     }
 }

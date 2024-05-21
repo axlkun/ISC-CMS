@@ -25,7 +25,7 @@ const form = useForm({
 
 const breadcrumbs = [
     {
-        label: "Services",
+        label: "Servicios",
         url: route('services.index')
     },
     {
@@ -56,7 +56,7 @@ const saveService = () => {
 </script>
 
 <template>
-    <AppLayout title="Service">
+    <AppLayout title="Servicio">
         <template #header>
             <BreadCroumbs :items="breadcrumbs"></BreadCroumbs>
         </template>
@@ -65,7 +65,7 @@ const saveService = () => {
             <Card>
                 <form @submit.prevent="saveService">
                     <div>
-                        <InputLabel for="name" value="Name" />
+                        <InputLabel for="name" value="Nombre" />
                         <TextInput id="name" v-model="form.name" type="text" class="mt-1 block w-full" required
                             autocomplete="name" />
                         <InputError :message="form.errors.name" class="mt-2" />

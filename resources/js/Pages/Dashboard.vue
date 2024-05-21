@@ -35,12 +35,12 @@ const breadcrumbs = [
                               
 
                             <h5 class="mb-2 mt-2 text-2xl font-semibold tracking-tight text-gray-900">
-                                Projects</h5>
+                                Proyectos</h5>
 
-                            <p class="mb-3 font-normal text-gray-500">{{ projectsCount }} active projects</p>
+                            <p class="mb-3 font-normal text-gray-500">{{ projectsCount }} proyectos subidos</p>
 
                             <p class="inline-flex items-center text-black-600">
-                                Last update: {{ latestProject }}
+                                Última actualización: {{ latestProject }}
                             </p>
                         </div>
                         
@@ -55,10 +55,10 @@ const breadcrumbs = [
                             <h5 class="mb-3 mt-3 text-2xl font-semibold tracking-tight text-gray-900">
                                 Services</h5>
 
-                            <p class="mb-3 font-normal text-gray-500">{{ servicesCount }} active services</p>
+                            <p class="mb-3 font-normal text-gray-500">{{ servicesCount }} Servicios activos</p>
 
                             <p class="inline-flex items-center text-black-600">
-                                Last update: {{ latestService }}
+                                Última actualización: {{ latestService }}
                             </p>
                         </div>
                     </div>

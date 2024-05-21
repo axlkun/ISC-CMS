@@ -36,7 +36,7 @@ class ServicesController extends Controller
         Service::create($data);
 
         return redirect()->route('services.index')
-            ->with('success', 'Service stored successfully');
+            ->with('success', 'Servicio creado');
     }
 
     public function edit(Service $service)
@@ -57,7 +57,7 @@ class ServicesController extends Controller
         $service->update($data);
 
         return redirect()->route('services.index')
-            ->with('success', 'Service updated successfully');
+            ->with('success', 'Servicio actualziado');
     }
 
     public function destroy(Service $service)
@@ -66,13 +66,13 @@ class ServicesController extends Controller
         // Verifica si el servicio tiene asociados artículos
         if ($service->projects()->count() > 0) {
             return redirect()->route('services.index')
-            ->with('failure', 'Service cannot be deleted because it is associated with one or more articles.');
+            ->with('failure', 'No se puede eliminar el servicio.');
         }
 
 
         $service->delete();
 
         return redirect()->route('services.index')
-            ->with('success', 'Service deleted successfully');
+            ->with('success', 'Servicio eliminado');
     }
 }

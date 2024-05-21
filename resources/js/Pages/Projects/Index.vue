@@ -13,31 +13,31 @@ const props = defineProps({
 });
 
 const headers = [
-    { name: "Title" },
-    { name: "Service" },
-    { name: "Created date" },
+    { name: "Titulo" },
+    { name: "Servicio" },
+    { name: "Fecha de creacion" },
     {
-        name: "Actions",
+        name: "Acciones",
         class: "text-right"
     }
 ];
 
 const breadcrumbs = [
     {
-        label: "Projects"
+        label: "Proyectos"
     }
 ];
 
 </script>
 
 <template>
-    <AppLayout title="Projects">
+    <AppLayout title="Proyectos">
         <template #header>
             <BreadCroumbs :items="breadcrumbs"></BreadCroumbs>
         </template>
 
         <Container>
-            <PrimaryButton :href="route('projects.create')">Add new</PrimaryButton>
+            <PrimaryButton :href="route('projects.create')">Nuevo proyecto</PrimaryButton>
 
             <Card class="mt-4">
                 <AppTable :headers="headers" :items="projects">
