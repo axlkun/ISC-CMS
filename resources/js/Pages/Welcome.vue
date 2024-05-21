@@ -44,22 +44,6 @@ onMounted(() => {
 
             <div class="mt-16">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-                    <div class="scale-100 p-6 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-blue-500">
-                        <div>
-                            <div class="h-16 w-16 bg-blue-50 flex items-center justify-center rounded-full">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="blue" class="w-6 h-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" />
-                                  </svg>
-                                  
-                            </div>
-
-                            <h2 class="mt-6 text-xl font-semibold text-gray-900">Editar Contenido</h2>
-
-                            <p class="mt-4 text-gray-500 text-sm leading-relaxed">
-                                Personalice su sitio web con facilidad. Edite el texto y las imágenes en las secciones hero, about us y contact de su página. Cree una experiencia única que refleje su visión.
-                            </p>
-                        </div>
-                    </div>
 
                     <div class="scale-100 p-6 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-blue-500">
                         <div>
@@ -73,12 +57,31 @@ onMounted(() => {
                             <h2 class="mt-6 text-xl font-semibold text-gray-900">Mostrar Proyectos</h2>
 
                             <p class="mt-4 text-gray-500 text-sm leading-relaxed">
-                                Muestre su trabajo de manera impresionante. Cree entradas para mostrar sus proyectos en su portafolio. Presente sus logros de una manera profesional y atractiva.
+                                Muestra tu trabajo de manera impresionante. Crea entradas para mostrar tus proyectos en el portafolio. Presenta tus logros de una manera profesional y atractiva.
                             </p>
                         </div>
                     </div>
 
-                    <!-- <div class="scale-100 p-6 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20  flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-blue-500">
+                    <div class="scale-100 p-6 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20 flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-blue-500">
+                        <div>
+                            <div class="h-16 w-16 bg-blue-50 flex items-center justify-center rounded-full">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="blue" class="w-6 h-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" />
+                                  </svg>
+                                  
+                            </div>
+
+                            <h2 class="mt-6 text-xl font-semibold text-gray-900">Editar Contenido</h2>
+
+                            <p class="mt-4 text-gray-500 text-sm leading-relaxed">
+                                Actualiza de manera periódica el contenido de los proyectos, puedes añadir nuevas imagenes, cambiar título o añadir un nuevo servicio a los proyectos existentes.
+                            </p>
+                        </div>
+                    </div>
+
+                    
+
+                    <div class="scale-100 p-6 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20  flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-blue-500">
                         <div>
                             <div class="h-16 w-16 bg-blue-50 flex items-center justify-center rounded-full">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-blue-500">
@@ -86,13 +89,13 @@ onMounted(() => {
                                 </svg>
                             </div>
 
-                            <h2 class="mt-6 text-xl font-semibold text-gray-900">Blog Personalizado</h2>
+                            <h2 class="mt-6 text-xl font-semibold text-gray-900">Optimizado para SEO</h2>
 
                             <p class="mt-4 text-gray-500 text-sm leading-relaxed">
-                                Comparta sus pensamientos y conocimientos con el mundo. Maneje un blog personalizado para redactar y publicar cualquier tipo de contenido. Llegue a su audiencia de manera efectiva.
+                                El sitio web principal está desarrollado con una tecnología SEO friendly para potenciar el alcance de la página.
                             </p>
                         </div>
-                    </div> -->
+                    </div>
 
                     <div class="scale-100 p-6 bg-white from-gray-700/50 via-transparent rounded-lg shadow-2xl shadow-gray-500/20  flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-blue-500">
                         <div>
@@ -106,7 +109,7 @@ onMounted(() => {
                             <h2 class="mt-6 text-xl font-semibold text-gray-900">Contacto Directo</h2>
 
                             <p class="mt-4 text-gray-500 text-sm leading-relaxed">
-                                Configura un correo electrónico de contacto y recibe mensajes de tus visitantes de manera instantánea. Con nuestra sección de contacto, establece una comunicación directa y efectiva..
+                                El sitio web principal comparte tus medios de contacto como correo y redes sociales, establece una comunicación directa y efectiva con clientes potenciales.
                             </p>
                         </div>
                     </div>
@@ -120,7 +123,7 @@ onMounted(() => {
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="-mt-px mr-1 w-5 h-5 stroke-gray-400 group-hover:stroke-gray-600">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
                             </svg>
-                            Axel Cruz
+                            Contacto
                         </a>
                     </div>
                 </div>
