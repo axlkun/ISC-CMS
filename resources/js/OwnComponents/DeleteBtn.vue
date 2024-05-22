@@ -37,16 +37,16 @@ const deleteItem = () => {
 
         <ConfirmationModal :show="show">
             <template #title>
-                Delete {{moduleName}}
+                Eliminar {{moduleName}}
             </template>
             <template #content>
-                Are you sure you want to delete this {{moduleName}}
+                ¿Estás seguro de eliminar este {{moduleName}}?
             </template>
 
             <template #footer>
-                <SecondaryButton @click.prevent="show = false">Cancel</SecondaryButton>
+                <SecondaryButton @click.prevent="show = false">Cancelar</SecondaryButton>
 
-                <DangerButton class="ml-2" @click.native="deleteItem" :disabled="form.processing" :class="{'opacity: 25': form.processing}">Delete</DangerButton>
+                <DangerButton class="ml-2" @click.native="deleteItem" :disabled="form.processing" :class="{'opacity: 25': form.processing}">Eliminar</DangerButton>
             </template>
         </ConfirmationModal>
     </div>

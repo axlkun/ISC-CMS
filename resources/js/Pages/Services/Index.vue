@@ -50,7 +50,7 @@ const breadcrumbs = [
                                 <EditBtn :url="route('services.edit', { service: service.id })"></EditBtn>
 
                                 <DeleteBtn :url="route('services.destroy', { service: service.id })"
-                                    module-name="Service"></DeleteBtn>
+                                    module-name="servicio"></DeleteBtn>
                             </div>
                         </td>
                     </tr>
